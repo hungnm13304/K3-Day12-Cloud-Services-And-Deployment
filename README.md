@@ -1,6 +1,6 @@
 # K3 — Ngày 12: Hạ Tầng Cloud & Deployment (9h00–13h00)
 
-[![CI](https://github.com/VinUni-AI20k/K3-Day12-Cloud-Services-And-Deployment/actions/workflows/ci.yml/badge.svg)](https://github.com/VinUni-AI20k/K3-Day12-Cloud-Services-And-Deployment/actions/workflows/ci.yml)
+[![CI](https://github.com/hungnm13304/K3-Day12-Cloud-Services-And-Deployment/actions/workflows/ci.yml/badge.svg)](https://github.com/hungnm13304/K3-Day12-Cloud-Services-And-Deployment/actions/workflows/ci.yml)
 
 Đưa một AI agent từ `localhost:8000` lên một địa chỉ công khai mà người khác
 gọi được, có bảo mật, có giới hạn chi phí, và không sập khi bạn deploy bản mới.
