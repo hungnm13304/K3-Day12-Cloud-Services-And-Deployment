@@ -10,17 +10,17 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Họ và tên | (điền họ tên) |
-| Mã học viên | (điền mã học viên) |
-| Repo | (điền link repo DAY12-...) |
+| Họ và tên | Nguyễn Mạnh Hưng |
+| Mã học viên | 2A202601829 |
+| Repo | https://github.com/VinUni-AI20k/K3-Day12-Cloud-Services-And-Deployment |
 
 ## Service
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://TODO-thay-bang-url-that.up.railway.app |
-| Platform | Railway / Render / Cloud Run — (điền platform bạn dùng) |
-| Ngày deploy | (điền ngày) |
+| Public URL | Chưa có; chạy local bằng Docker Compose khi chưa có tài khoản cloud |
+| Platform | Render (cấu hình sẵn trong `render.yaml`); cloud deploy đang chờ thông tin tài khoản |
+| Ngày deploy | Chưa deploy cloud |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
@@ -30,7 +30,7 @@ Ghi tên biến và **nguồn giá trị**, không ghi giá trị:
 |------|--------|---------|
 | `PORT` | ✅ | platform tự gán |
 | `AGENT_API_KEY` | ✅ | đặt trong dashboard, không nằm trong repo |
-| `REDIS_URL` | ✅ | (điền: Redis add-on của platform / Upstash / ...) |
+| `REDIS_URL` | ✅ | Render Redis add-on theo `render.yaml` hoặc `redis://redis:6379/0` trong Compose |
 | `RATE_LIMIT_PER_MINUTE` | ✅ | 10 |
 | `MONTHLY_BUDGET_USD` | ✅ | 10.0 |
 | `LOG_LEVEL` | ✅ | INFO |
@@ -73,7 +73,8 @@ done; echo
 Dán output của các lệnh trên vào đây:
 
 ```
-(điền output)
+Chưa chạy cloud deployment trong môi trường làm bài. Dùng `LOCAL_FALLBACK=true`
+và chạy `docker compose up -d` để kiểm tra stack local.
 ```
 
 ## Ảnh Chụp Màn Hình
@@ -97,5 +98,6 @@ Không đăng ký được tài khoản cloud? Vẫn nộp được bài, nhưng
 5. Ghi rõ lý do không deploy được vào phần dưới đây:
 
 ```
-(điền lý do nếu dùng phương án dự phòng, ngược lại xóa mục này)
+Chưa có thông tin tài khoản cloud/public URL trong workspace; mã nguồn và cấu
+hình deploy đã hoàn thiện, chỉ còn tạo service trên platform và dán URL thật.
 ```
