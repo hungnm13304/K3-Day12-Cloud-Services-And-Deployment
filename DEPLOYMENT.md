@@ -18,9 +18,9 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | Chưa có; chạy local bằng Docker Compose khi chưa có tài khoản cloud |
-| Platform | Render (cấu hình sẵn trong `render.yaml`); cloud deploy đang chờ thông tin tài khoản |
-| Ngày deploy | Chưa deploy cloud |
+| Public URL | https://day12-agent-khyo.onrender.com |
+| Platform | Render |
+| Ngày deploy | 2026-08-10 |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
@@ -73,8 +73,23 @@ done; echo
 Dán output của các lệnh trên vào đây:
 
 ```
-Chưa chạy cloud deployment trong môi trường làm bài. Dùng `LOCAL_FALLBACK=true`
-và chạy `docker compose up -d` để kiểm tra stack local.
+GET `/health` → HTTP 200:
+
+```json
+{"status":"ok","service":"day12-agent","version":"1.0.0"}
+```
+
+GET `/ready` → HTTP 200:
+
+```json
+{"status":"ready","redis":true}
+```
+
+POST `/ask` không có API key → HTTP 401:
+
+```json
+{"detail":"invalid or missing API key"}
+```
 ```
 
 ## Ảnh Chụp Màn Hình
@@ -98,6 +113,6 @@ Không đăng ký được tài khoản cloud? Vẫn nộp được bài, nhưng
 5. Ghi rõ lý do không deploy được vào phần dưới đây:
 
 ```
-Chưa có thông tin tài khoản cloud/public URL trong workspace; mã nguồn và cấu
-hình deploy đã hoàn thiện, chỉ còn tạo service trên platform và dán URL thật.
+Đã deploy thành công trên Render. API key được lưu trong Render Environment,
+không lưu trong repository.
 ```
